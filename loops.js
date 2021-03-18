@@ -10,7 +10,6 @@ while (i < fruits.length) {
   i++;
 }
 
-
 // fruits.each do |fruit|
 
 // fruits.forEach(function(fruit) {
