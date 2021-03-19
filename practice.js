@@ -151,4 +151,108 @@ function allSums(numbers1, numbers2) {
   return finalArray;
 }
 
-console.log(allSums([1, 5, 10], [100, 500, 1000]));
+// console.log(allSums([1, 5, 10], [100, 500, 1000]));
+
+
+// # Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built into Ruby.
+// def descending(numbers)
+//   result = []
+//   index = numbers.length - 1
+//   numbers.length.times do
+//     result << numbers[index]
+//     index = index - 1
+//   end
+//   result
+// end
+// p descending([1, 3, 5, 7])
+
+
+// function descending(numbers) {
+//   var i = numbers.length - 1;
+//   var reversed = [];
+//   while (i >= 0) {
+//     reversed.push(numbers[i]);
+//     i--;
+//   }
+//   return reversed;
+// }
+
+// console.log(descending([1, 3, 5, 7]));
+
+
+// function descending(numbers) {
+//   // console.log(numbers);
+//   var reversed = [];
+//   for (var i = numbers.length - 1; i >= 0; i--) {
+//     reversed.push(numbers[i]);
+//   }
+//   return reversed;
+// }
+
+// console.log(descending([1, 3, 5, 7]));
+
+
+
+// function sumCombinations(numbers1, numbers2) {
+//   var i = 0;
+//   var finalArray = [];
+//   while (i < numbers1.length) {
+//     // console.log(numbers1[i]);
+//     var j = 0;
+//     while (j < numbers2.length) {
+//       finalArray.push(numbers1[i] + numbers2[j]);
+//       j++;
+//     }
+//     i++;
+//   }
+//   return finalArray;
+// }
+
+
+// console.log(sumCombinations([1, 5, 10], [100, 500, 1000]));
+
+
+
+// what if you wanted to practice js outside of class?
+// ruby skills challenges into js
+// redo the prework in js
+
+
+
+// 5, 7, 10
+
+// 5. Write a function that takes in an array of strings and joins them together to make a single string separated by commas.
+
+// function joinStrings(strings) {
+//   // return strings.join(", ");
+//   var sentence = "";
+//   strings.forEach(function(string) {
+//     sentence += string + ", ";
+//   })
+//   return sentence;
+// }
+
+
+// console.log(joinStrings(["here", "are", "strings", "that", "will"]));
+
+
+
+// 7. Write a function that takes in an array of numbers and returns the two smallest numbers.
+
+function twoSmallest(numbers) {
+  // console.log(numbers);
+  var smallest = numbers[0];
+  numbers.forEach(function(number) {
+    // console.log(number);
+    if (number < smallest) {
+      smallest = number;
+    }
+  })
+  // return smallest;
+  // remove the smallest element
+  // run the loop again and find the smallest remaining
+  // numbers.splice()
+  
+}
+
+console.log(twoSmallest([5,2,7,9,12,0,3,1]));
