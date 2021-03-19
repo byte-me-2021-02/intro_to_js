@@ -240,19 +240,59 @@ function allSums(numbers1, numbers2) {
 // 7. Write a function that takes in an array of numbers and returns the two smallest numbers.
 
 function twoSmallest(numbers) {
-  // console.log(numbers);
   var smallest = numbers[0];
-  numbers.forEach(function(number) {
-    // console.log(number);
-    if (number < smallest) {
-      smallest = number;
+  var indexOfSmallest = 0
+  var i = 0;
+  while (i < numbers.length) {
+    if (numbers[i] < smallest) {
+      smallest = numbers[i];
+      indexOfSmallest = i;
     }
-  })
-  // return smallest;
-  // remove the smallest element
-  // run the loop again and find the smallest remaining
-  // numbers.splice()
+    i++;
+  }  
+  numbers.splice(indexOfSmallest, 1)
+  var secondSmallest = numbers[0];
+  var indexOfSecondSmallest = 0;
+  var j = 0;
+  while (j < numbers.length) {
+    if (numbers[j] < secondSmallest) {
+      secondSmallest = numbers[j];
+      indexOfSecondSmallest = j;
+    }
+    j++;
+  }
   
+  return [smallest, secondSmallest];
 }
 
-console.log(twoSmallest([5,2,7,9,12,0,3,1]));
+// console.log(twoSmallest([5,2,7,9,12,-2,3,1]));
+
+
+
+
+
+// 10. Write a function that takes in an array of words and returns the number of times the letter “a” appeared in total.
+
+
+function totalAs(strings) {
+  var i = 0;
+  var count = 0;
+  while (i < strings.length) {
+    var j = 0;
+    while (j < strings[i].length) {
+      // console.log(strings[i][j]);
+      if (strings[i][j] === "a") {
+        count++;
+      }
+      // console.log("****");
+      j++;
+    }
+    i++;
+  }
+  return count;
+}
+
+
+console.log(totalAs(["apple", "banana", "apricot", "mango", "alfoaaanzo"]));
+
+// 10
